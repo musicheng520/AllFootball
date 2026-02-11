@@ -1,0 +1,15 @@
+# Build output
+**/target/
+
+# IntelliJ
+.idea/
+*.iml
+
+# OS / temp
+*.class
+
+# Local config (DO NOT COMMIT SECRETS)
+src/main/resources/application-dev.yml
+src/main/resources/application-prod.yml
+src/main/resources/application-local.yml
+*.env

@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: ${allfootball.datasource.driver-class-name}
+    url: jdbc:mysql://${allfootball.datasource.host}:${allfootball.datasource.port}/${allfootball.datasource.database}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=utf8
+    username: ${allfootball.datasource.username}
+    password: ${allfootball.datasource.password}
+
+  data:
+    redis:
+      host: ${allfootball.redis.host}
+      port: ${allfootball.redis.port}
+      password: ${allfootball.redis.password:}
+      database: ${allfootball.redis.database:0}
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
